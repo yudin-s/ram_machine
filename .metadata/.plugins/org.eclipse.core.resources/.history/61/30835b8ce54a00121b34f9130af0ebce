@@ -1,0 +1,8 @@
+package org.yudin.ram.memory;
+
+public interface IMemory {
+
+	public double loadByID(int id);
+
+	public void saveToID(int id);
+}

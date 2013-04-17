@@ -1,0 +1,43 @@
+package org.yudin.ram.inter;
+
+public class Command {
+
+	private int command;
+	private boolean isCubicle;
+	private int parametr;
+	private IRunnerComand runner;
+
+	public Command(int commandCode, boolean isCubicle, int parametr) {
+		command = commandCode;
+		this.isCubicle = isCubicle;
+		this.parametr = parametr;
+		runner = Runner.create(commandCode);
+	}
+
+	public int getCommand() {
+		return command;
+	}
+
+	public void setCommand(int command) {
+		this.command = command;
+	}
+
+	public boolean isCubicle() {
+		return isCubicle;
+	}
+
+	public void setCubicle(boolean isCubicle) {
+		this.isCubicle = isCubicle;
+	}
+
+	public int getParametr() {
+		return parametr;
+	}
+
+	public void setParametr(int parametr) {
+		this.parametr = parametr;
+	}
+	public boolean run(){
+		
+	}
+}

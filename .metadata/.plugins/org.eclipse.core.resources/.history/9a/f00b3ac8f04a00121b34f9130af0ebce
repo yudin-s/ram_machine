@@ -1,0 +1,56 @@
+package org.yudin.ram.system;
+
+import org.yudin.ram.inter.Command;
+
+public class Worker implements ICodeWorker {
+
+	private Command array[];
+	private int current;
+
+	public Worker(Command array[]) {
+		loadCode(array);
+	}
+
+	public void loadCode(Command array[]) {
+		this.array = array;
+	}
+
+	public Command[] getCode() {
+		return array;
+	}
+
+	@Override
+	public boolean nextLine() {
+		int newVal = current + 1;
+		if (newVal < array.length) {
+			current = newVal;
+			return true;
+		} else{
+			return false;
+		}
+	}
+
+	@Override
+	public int currentLine() {
+		return current;
+	}
+
+	@Override
+	public Command currentCommand() {
+		return array[current];
+	}
+
+	@Override
+	public boolean moveToLine(int line) {
+		if (checkLine(line)) {
+			current = line;
+			return true;
+		}
+		return false;
+	}
+
+	private boolean checkLine(int line) {
+		return line < array.length && line > 0;
+	}
+
+}

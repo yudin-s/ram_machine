@@ -1,0 +1,7 @@
+package org.yudin.ram.memory;
+
+public class Writer {
+	public static void write(int val) {
+
+	}
+}

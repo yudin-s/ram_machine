@@ -1,0 +1,7 @@
+package org.yudin.ram.memory;
+
+public class Reader {
+	public static int readNext(){
+		
+	}
+}

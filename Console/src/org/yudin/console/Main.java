@@ -1,0 +1,75 @@
+package org.yudin.console;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import org.yudin.ram.inter.Command;
+import org.yudin.ram.inter.CommandEnum;
+import org.yudin.ram.system.CommandFactory;
+import org.yudin.ram.system.Reader;
+import org.yudin.ram.system.Worker;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+//		args = new String[] { "testFile" };
+		printLine("Enter input data in line (space - delimer)");
+		Scanner scan = new Scanner(System.in);
+		String line = scan.nextLine();
+		Integer array[] = StrToIntArray.convert(line);
+		Reader.setArray(array);
+		Worker instance = Worker.getInstance();
+		if (args.length == 0) {
+			Worker worker = instance;
+			Command command = null;
+			do {
+				try {
+					print("> ");
+					line = scan.nextLine();
+					command = CommandFactory.create(line);
+					worker.addAndRun(command);
+				} catch (UnsupportedOperationException e) {
+					printLine(e.getMessage());
+				}
+			} while (itsNotHalt(command));
+		} else {
+			try {
+				Scanner fileScanner = new Scanner(new FileInputStream(args[0]));
+				ArrayList<Command> list = new ArrayList<Command>();
+				int currentLine = 1;
+				while (fileScanner.hasNextLine()) {
+					line = fileScanner.nextLine();
+					Command command = CommandFactory.create(line);
+					if (command != null) {
+						list.add(command);
+					} else {
+						printLine("Command in line " + currentLine
+								+ " not found");
+					}
+					currentLine++;
+				}
+				instance.loadCode(list.toArray(new Command[1]));
+				instance.currentCommand().run();
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	private static boolean itsNotHalt(Command command) {
+		return command.getCommand() != CommandEnum.HALT.intEqual;
+	}
+
+	public static void printLine(String line) {
+		System.out.println(line);
+	}
+
+	public static void print(String line) {
+		System.out.print(line);
+	}
+}

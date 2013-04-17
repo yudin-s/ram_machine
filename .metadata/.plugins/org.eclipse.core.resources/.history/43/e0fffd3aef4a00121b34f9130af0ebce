@@ -1,0 +1,35 @@
+package org.yudin.ram.inter.commands;
+
+import org.yudin.ram.inter.IRunnerComand;
+import org.yudin.ram.inter.commands.jumps.Jgtz;
+import org.yudin.ram.inter.commands.jumps.Jneg;
+import org.yudin.ram.inter.commands.jumps.Jpos;
+import org.yudin.ram.inter.commands.jumps.Jump;
+import org.yudin.ram.inter.commands.jumps.Jzero;
+import org.yudin.ram.inter.commands.memory.Load;
+import org.yudin.ram.inter.commands.memory.Read;
+import org.yudin.ram.inter.commands.memory.Store;
+import org.yudin.ram.inter.commands.memory.Write;
+
+public class AllCommands {
+
+	// Jumpers
+
+	public static final IRunnerComand JZERO = new Jzero();
+	public static final IRunnerComand JNEG = new Jneg();
+	public static final IRunnerComand JPOS = new Jpos();
+	public static final IRunnerComand JGTZ = new Jgtz();
+	public static final IRunnerComand JUMP = new Jump();
+
+	// Memory
+
+	public static final IRunnerComand STORE = new Store();
+	public static final IRunnerComand WRITE = new Write();
+	public static final IRunnerComand LOAD = new Load();
+	public static final IRunnerComand READ = new Read();
+
+	// Control
+	
+	public static final IRunnerComand HALT = new Halt();
+
+}

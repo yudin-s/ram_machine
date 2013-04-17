@@ -1,0 +1,20 @@
+package org.yudin.console;
+
+import java.util.Scanner;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		printLine("Enter input data in line (space - delimer)");
+		Scanner scan = new Scanner(System.in);
+		String line = scan.nextLine();
+		Integer array[] = StrToIntArray.
+	}
+
+	public static void printLine(String line) {
+		System.out.println(line);
+	}
+}

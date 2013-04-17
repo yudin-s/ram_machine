@@ -1,0 +1,9 @@
+import java.util.ArrayList;
+
+
+public class StrToIntArray {
+	int array[] convert(String val){
+		ArrayList<Integer> result = new ArrayList<Integer>();
+		return result;
+	}
+}

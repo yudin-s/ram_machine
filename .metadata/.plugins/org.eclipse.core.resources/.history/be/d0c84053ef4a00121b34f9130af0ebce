@@ -1,0 +1,14 @@
+package org.yudin.ram.inter.commands.jumps;
+
+import org.yudin.ram.inter.CommandEnum;
+import org.yudin.ram.inter.IRunnerComand;
+import org.yudin.ram.inter.commands.AllCommands;
+
+public class Jpos implements IRunnerComand {
+
+	@Override
+	public boolean run(boolean isCubicle, int value) {
+		return !CommandEnum.JNEG.runner.run(isCubicle, value);
+	}
+
+}

@@ -1,0 +1,5 @@
+package org.yudin.ram.system;
+
+public class CommandFactory {
+
+}

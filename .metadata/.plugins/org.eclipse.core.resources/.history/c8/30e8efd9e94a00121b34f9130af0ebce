@@ -1,0 +1,5 @@
+package org.yudin.ram.inter.commands;
+
+public class Jgtz extends Jpos{
+
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.Jneg"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.Jzero"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.Jpos"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.Jgtz"/>
+<fullyQualifiedTypeName name="java.io.Reader"/>
+<fullyQualifiedTypeName name="org.yudin.ram.memory.Reader"/>
+<fullyQualifiedTypeName name="org.yudin.ram.memory.MemoryManager"/>
+<fullyQualifiedTypeName name="org.yudin.ram.memory.Writer"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.AllCommands"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.Runner"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.IRunnerComand"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.memory.Load"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.memory.Store"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.memory.Read"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.memory.Write"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.jumps.Jump"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.jumps.Jgtz"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.jumps.Jzero"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.jumps.Jneg"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.Commands"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.Halt"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.Add"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.Div"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.Subt"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.Rest"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.commands.Mult"/>
+<fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+<fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+<fullyQualifiedTypeName name="java.util.regex.Matcher"/>
+<fullyQualifiedTypeName name="java.lang.UnsupportedOperationException"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="org.yudin.ram.system.Reader"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.Command"/>
+<fullyQualifiedTypeName name="org.yudin.ram.inter.CommandEnum"/>
+<fullyQualifiedTypeName name="org.yudin.ram.system.CommandFactory"/>
+</qualifiedTypeNameHistroy>

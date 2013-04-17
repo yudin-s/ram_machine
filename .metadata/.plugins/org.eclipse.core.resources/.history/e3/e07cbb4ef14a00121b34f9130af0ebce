@@ -1,0 +1,12 @@
+package org.yudin.ram.system;
+
+import org.yudin.ram.inter.Command;
+
+public class CommandFactory {
+	public static final String REGEX = "[A-Z]{1,}=-?[0-9]{1,}";
+
+	public static Command create(String create) {
+		boolean isCubicle;
+
+	}
+}

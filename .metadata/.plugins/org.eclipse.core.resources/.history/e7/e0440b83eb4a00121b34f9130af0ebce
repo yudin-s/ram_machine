@@ -1,0 +1,15 @@
+package org.yudin.ram.inter.commands;
+
+import org.yudin.ram.inter.IRunnerComand;
+import org.yudin.ram.inter.commands.jumps.Jgtz;
+import org.yudin.ram.inter.commands.jumps.Jneg;
+import org.yudin.ram.inter.commands.jumps.Jpos;
+import org.yudin.ram.inter.commands.jumps.Jzero;
+
+public class AllCommands {
+	public static final IRunnerComand JZERO = new Jzero();
+	public static final IRunnerComand JNEG = new Jneg();
+	public static final IRunnerComand JPOS = new Jpos();
+	public static final IRunnerComand JGTZ = new Jgtz();
+
+}

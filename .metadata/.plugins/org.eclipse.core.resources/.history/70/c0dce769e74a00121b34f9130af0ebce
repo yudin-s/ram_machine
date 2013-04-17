@@ -1,0 +1,12 @@
+package org.yudin.ram.inter;
+
+public enum CommandEnum {
+	READ(0), LOAD(), STORE, WRITE, JUMP, JZERO, JGTZ, JPOS, JNEG,ADD,DIV,SUBT,MULT;
+	
+	
+	private CommandEnum(int toInt) {
+		this.toInt = toInt;
+	}
+
+	public final int toInt;
+}

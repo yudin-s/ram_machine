@@ -1,0 +1,9 @@
+package org.yudin.ram.system;
+
+import org.yudin.ram.inter.Command;
+
+public class CommandFactory {
+	public static Command create(String create) {
+
+	}
+}

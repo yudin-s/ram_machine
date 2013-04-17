@@ -1,0 +1,17 @@
+package org.yudin.ram.system;
+
+public class Reader {
+	private int array[];
+	
+	public static int readNext() {
+		return 0;
+	}
+
+	public int[] getArray() {
+		return array;
+	}
+
+	public void setArray(int array[]) {
+		this.array = array;
+	}
+}

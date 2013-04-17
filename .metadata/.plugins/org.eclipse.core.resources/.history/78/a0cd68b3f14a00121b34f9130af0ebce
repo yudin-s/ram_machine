@@ -1,0 +1,19 @@
+package org.yudin.ram.system;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.yudin.ram.inter.Command;
+
+public class CommandFactory {
+	public static final String REGEX = "[A-Z]{1,}[\\s]{1,}?=?-?[0-9]{1,}";
+	public static final Pattern PATTERN = Pattern.compile(REGEX);
+
+	public static Command create(String create) {
+		boolean isCubicle;
+		Matcher matcher = PATTERN.matcher(create);
+		if (matcher.find()) {
+			String clearCommand = create.substring(matcher.start(),matcher.end());
+		}
+	}
+}

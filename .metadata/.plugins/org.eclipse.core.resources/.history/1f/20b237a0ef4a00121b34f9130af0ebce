@@ -1,0 +1,32 @@
+package org.yudin.ram.inter;
+
+public class Commands {
+	
+	// MEMORY OPERATIONS
+	
+	public static final int READ = 0;
+	public static final int LOAD = 1;
+	public static final int STORE = 2;
+	public static final int WRITE = 3;
+	
+	// MATH OPERATIONS
+	
+	public static final int ADD = 4;
+	public static final int DIV = 5;
+	public static final int SUBT = 6;
+	public static final int MULT = 7;
+	
+	//JUMPERS
+	
+	public static final int JUMP = 8;
+	public static final int JZERO = 9;
+	public static final int JGTZ = 10;
+	public static final int JPOS = 11;
+	public static final int JNEG = 12;
+	
+	//ADMIN
+	
+	public static final int HALT = 13;
+	public static final int REST = 14;
+	
+}

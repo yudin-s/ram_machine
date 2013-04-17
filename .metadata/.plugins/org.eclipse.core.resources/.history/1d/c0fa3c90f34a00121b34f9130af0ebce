@@ -1,0 +1,88 @@
+package org.yudin.ram.system;
+
+import java.util.StringTokenizer;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.yudin.ram.inter.Command;
+import org.yudin.ram.inter.CommandEnum;
+
+public class CommandFactory {
+	public static final String REGEX = "[A-Z]{1,}[\\s]{1,}?=?-?[0-9]{1,}";
+	public static final Pattern PATTERN = Pattern.compile(REGEX);
+	public static final String REGEX_LITERAL = "[A-Z]{1,}";
+	public static final Pattern PATTERN_LITERAL = Pattern
+			.compile(REGEX_LITERAL);
+
+	public static Command create(String create) {
+		Command result = null;
+		boolean isCubicle;
+		int val;
+		CommandEnum commandE;
+		Matcher matcher = PATTERN.matcher(create);
+		if (matcher.find()) {
+			String clearCommand = create.substring(matcher.start(),
+					matcher.end());
+			if (clearCommand.contains("=")) {
+				StringTokenizer tok = new StringTokenizer(clearCommand, "=");
+				String command = tok.nextToken();
+				isCubicle = false;
+				String value = tok.nextToken();
+				val = Integer.parseInt(value);
+				commandE = selector(command);
+			} else {
+				Matcher parseLine = PATTERN_LITERAL.matcher(clearCommand);
+				isCubicle = true;
+				String command = clearCommand.substring(parseLine.start(),parseLine.end());
+				String value = clearCommand.substring(parseLine.end());
+			}
+		}
+		return result;
+	}
+
+	private static CommandEnum selector(String val) {
+		if (val.equals(CommandEnum.LOAD.name())) {
+			return CommandEnum.LOAD;
+		}
+		if (val.equals(CommandEnum.STORE.name())) {
+			return CommandEnum.STORE;
+		}
+		if (val.equals(CommandEnum.READ.name())) {
+			return CommandEnum.READ;
+		}
+		if (val.equals(CommandEnum.ADD.name())) {
+			return CommandEnum.ADD;
+		}
+		if (val.equals(CommandEnum.DIV.name())) {
+			return CommandEnum.DIV;
+		}
+		if (val.equals(CommandEnum.HALT.name())) {
+			return CommandEnum.HALT;
+		}
+		if (val.equals(CommandEnum.JGTZ.name())) {
+			return CommandEnum.JGTZ;
+		}
+		if (val.equals(CommandEnum.JNEG.name())) {
+			return CommandEnum.JNEG;
+		}
+		if (val.equals(CommandEnum.JUMP.name())) {
+			return CommandEnum.JUMP;
+		}
+		if (val.equals(CommandEnum.JZERO.name())) {
+			return CommandEnum.JZERO;
+		}
+		if (val.equals(CommandEnum.MULT.name())) {
+			return CommandEnum.MULT;
+		}
+		if (val.equals(CommandEnum.REST.name())) {
+			return CommandEnum.REST;
+		}
+		if (val.equals(CommandEnum.SUBT.name())) {
+			return CommandEnum.SUBT;
+		}
+		if (val.equals(CommandEnum.WRITE.name())) {
+			return CommandEnum.WRITE;
+		}
+		return null;
+	}
+}

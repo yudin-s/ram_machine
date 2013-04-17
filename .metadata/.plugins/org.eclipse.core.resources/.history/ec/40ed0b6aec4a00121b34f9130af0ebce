@@ -1,0 +1,10 @@
+package org.yudin.ram.inter;
+
+public class Runner {
+	public static final IRunnerComand create(int code) {
+		switch (code) {
+		case Commands.ADD:
+			null;
+		}
+	}
+}

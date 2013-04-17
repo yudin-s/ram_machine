@@ -1,0 +1,35 @@
+package org.yudin.console;
+
+import java.util.Scanner;
+
+import org.yudin.ram.inter.Command;
+import org.yudin.ram.inter.CommandEnum;
+import org.yudin.ram.system.CommandFactory;
+import org.yudin.ram.system.Reader;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		printLine("Enter input data in line (space - delimer)");
+		Scanner scan = new Scanner(System.in);
+		String line = scan.nextLine();
+		Integer array[] = StrToIntArray.convert(line);
+		Reader.setArray(array);
+		Command command = null;
+		do {
+			line = scan.nextLine();
+			command = CommandFactory.create(line);
+		} while (itsNotHalt(command));
+	}
+
+	private static boolean itsNotHalt(Command command) {
+		return command.getCommand()!=CommandEnum.HALT.intEqual;
+	}
+
+	public static void printLine(String line) {
+		System.out.println(line);
+	}
+}

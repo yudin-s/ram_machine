@@ -1,0 +1,5 @@
+package org.yudin.ram.memory;
+
+public class Writer {
+
+}

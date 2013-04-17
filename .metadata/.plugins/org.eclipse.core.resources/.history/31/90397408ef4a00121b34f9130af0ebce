@@ -1,0 +1,42 @@
+package org.yudin.ram.inter;
+
+import org.yudin.ram.inter.commands.AllCommands;
+
+public class Runner {
+	public static final IRunnerComand create(int code) {
+		switch (code) {
+		case Commands.ADD:
+			return null;
+		case Commands.DIV:
+			return null;
+		case Commands.HALT:
+			return null;
+		case Commands.JGTZ:
+			return AllCommands.JGTZ;
+		case Commands.JNEG:
+			return AllCommands.JNEG;
+		case Commands.JPOS:
+			return AllCommands.JPOS;
+		case Commands.JUMP:
+			return AllCommands.JUMP;
+		case Commands.JZERO:
+			return AllCommands.JZERO;
+		case Commands.LOAD:
+			return AllCommands.LOAD;
+		case Commands.MULT:
+			return null;
+		case Commands.READ:
+			return AllCommands.READ;
+		case Commands.REST:
+			return null;
+		case Commands.STORE:
+			return AllCommands.STORE;
+		case Commands.SUBT:
+			return null;
+		case Commands.WRITE:
+			return AllCommands.WRITE;
+		default:
+			throw new UnsupportedOperationException();
+		}
+	}
+}

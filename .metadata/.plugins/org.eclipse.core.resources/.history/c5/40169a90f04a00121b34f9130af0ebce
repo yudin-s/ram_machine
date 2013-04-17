@@ -1,0 +1,45 @@
+package org.yudin.ram.system;
+
+import org.yudin.ram.inter.Command;
+
+public class Worker implements ICodeWorker {
+
+	private Command array[];
+	private int current;
+	public Worker(Command array[]) {
+		loadCode(array);
+	}
+
+	public void loadCode(Command array[]) {
+		this.array = array;
+	}
+
+	public Command[] getCode() {
+		return array;
+	}
+
+	@Override
+	public boolean nextLine() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int currentLine() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Command currentCommand() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean moveToLine(int line) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

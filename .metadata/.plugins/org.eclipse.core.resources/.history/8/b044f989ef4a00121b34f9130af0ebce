@@ -1,0 +1,37 @@
+package org.yudin.ram.inter;
+
+import org.yudin.ram.inter.commands.Halt;
+import org.yudin.ram.inter.commands.jumps.Jgtz;
+import org.yudin.ram.inter.commands.jumps.Jneg;
+import org.yudin.ram.inter.commands.jumps.Jump;
+import org.yudin.ram.inter.commands.jumps.Jzero;
+import org.yudin.ram.inter.commands.memory.Load;
+import org.yudin.ram.inter.commands.memory.Read;
+import org.yudin.ram.inter.commands.memory.Store;
+import org.yudin.ram.inter.commands.memory.Write;
+
+public enum CommandEnum {
+	LOAD(new Load(), Commands.LOAD), 
+	STORE(new Store(), Commands.STORE),
+	READ(new Read(), Commands.READ),
+	WRITE(new Write(), Commands.WRITE),
+	JUMP(new Jump(), Commands.JUMP),
+	JGTZ(new Jgtz(), Commands.JGTZ),
+	JZERO(new Jzero(), Commands.JZERO),
+	JNEG(new Jneg(), Commands.JNEG),
+	ADD(new Add(), Commands.ADD),
+	DIV(new Div(), Commands.DIV),
+	SUBT(new Subt(), Commands.SUBT),
+	MULT(new Mult(), Commands.MULT),
+	HALT(new Halt(),Commands.HALT),
+	REST(new Rest(), Commands.REST);
+	
+	private CommandEnum(IRunnerComand runner, int equal) {
+		this.runner = runner;
+		intEqual = equal;
+	}
+	
+	public final IRunnerComand runner;
+	public final int intEqual;
+	
+}

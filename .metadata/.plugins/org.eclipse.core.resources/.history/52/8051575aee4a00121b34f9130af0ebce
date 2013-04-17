@@ -1,0 +1,19 @@
+package org.yudin.ram.inter;
+
+public enum CommandEnum {
+	LOAD, 
+	STORE,
+	READ,
+	WRITE,
+	JUMP,
+	JGTZ,
+	JPOS,
+	JZERO,
+	JNEG,
+	ADD,
+	DIV,
+	SUBT,
+	MULTI,
+	HALT,
+	REST;
+}

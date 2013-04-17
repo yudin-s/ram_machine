@@ -1,0 +1,35 @@
+package org.yudin.ram.system;
+
+import java.util.StringTokenizer;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.yudin.ram.inter.Command;
+import org.yudin.ram.inter.CommandEnum;
+
+public class CommandFactory {
+	public static final String REGEX = "[A-Z]{1,}[\\s]{1,}?=?-?[0-9]{1,}";
+	public static final Pattern PATTERN = Pattern.compile(REGEX);
+
+	public static Command create(String create) {
+		Command result;
+		boolean isCubicle;
+		int val;
+		Matcher matcher = PATTERN.matcher(create);
+		if (matcher.find()) {
+			String clearCommand = create.substring(matcher.start(),
+					matcher.end());
+			if (clearCommand.contains("=")) {
+				StringTokenizer tok = new StringTokenizer(clearCommand, "=");
+				String command = tok.nextToken();
+				isCubicle = false;
+				String value = tok.nextToken();
+				val = Integer.parseInt(value);
+			}
+		}
+	}
+
+	private CommandEnum selector(String val) {
+
+	}
+}

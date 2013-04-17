@@ -1,0 +1,16 @@
+package org.yudin.ram.inter.commands;
+
+import org.yudin.ram.inter.IRunnerComand;
+import org.yudin.ram.memory.MemoryManager;
+import org.yudin.ram.memory.Reader;
+
+public class Read implements IRunnerComand {
+
+	@Override
+	public boolean run(boolean isCubicle, int value) {
+		int val = Reader.readNext();
+		MemoryManager manager = MemoryManager.getInstance();
+		manager.saveToID(0, (double) value);
+	}
+
+}

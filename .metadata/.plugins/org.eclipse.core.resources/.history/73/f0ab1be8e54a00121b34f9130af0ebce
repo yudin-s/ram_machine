@@ -1,0 +1,24 @@
+package org.yudin.ram.memory;
+
+public class MemoryManager implements IMemory {
+
+	private static MemoryManager manager = null;
+	public static MemoryManager getInstance(){
+		if (manager == null){
+			
+		}
+	}
+	
+	@Override
+	public double loadByID(int id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void saveToID(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

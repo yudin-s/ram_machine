@@ -1,0 +1,39 @@
+package org.yudin.ram.inter;
+
+import org.yudin.ram.inter.commands.AllCommands;
+
+public class Runner {
+	public static final IRunnerComand create(int code) {
+		switch (code) {
+		case Commands.ADD:
+			return null;
+		case Commands.DIV:
+			return null;
+		case Commands.HALT:
+			return null;
+		case Commands.JGTZ:
+			return AllCommands.JGTZ;
+		case Commands.JNEG;
+			return 
+		case Commands.JPOS;
+		
+		case Commands.JUMP;
+		
+		case Commands.JZERO;
+		
+		case Commands.LOAD;
+		
+		case Commands.MULT;
+		
+		case Commands.READ;
+		
+		case Commands.REST;
+		
+		case Commands.STORE;
+		
+		case Commands.SUBT;
+		
+		case Commands.WRITE;
+		}
+	}
+}
